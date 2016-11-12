@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bellagio's Car Wash</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="../fonts/akzidenz-grotesk/akzidenzgrotesk-boldcondalt.otf" rel="stylesheet">
+    <link rel=stylesheet type="text/css" href="css/bootstrap.min.css"/>
+    <link rel=stylesheet type="text/css" href="css/bellagio.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bellagio.js"></script>
+</head>
+    
+<body data-spy="scroll" data-target=".navbar-collapse" data-offset="80">
+    
+<!--  NAVIGATION  -->
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> 
+                </button>
+                <a href="#"><img class="logo" alt="Bellagio Logo" src="images/Bellagio_logo.png"/></a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="#about">About</a></li> 
+                    <li><a href="#locations">Locations</a></li>
+                    <li><a href="#services">Services</a></li> 
+                    <li><a href="#hours">Hours</a></li> 
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<div class="bellagios">
+<!-- WELCOME TO BELLAGIOS  -->
+    <div id="about" class="anchor">
+        <div>
+            <div class="bellagio-welcome">
+                <h1 class="welcome-header">Welcome To Bellagio Car Washes</h1>
+                <p class="welcome-paragraph">Whether you're looking for an express car wash, full service detailing, or a quick professional oil change Bellagio has you covered. Experience world class, state of the art, and environmentally friendly eco wash systems plus a friendly professionally certified staff. You’ve never experienced a car wash quite like this.</p>
+                <p class="welcome-tag">Bellagio Car Washes. Experience the Difference</p>
+            </div>
+        </div>
+    </div>
+</div>
+   
+<!-- Map -->
+     <div id="locations" class="anchor">
+        <div class="row locations">
+            <div class="col-md-4 col-md-push-8">
+                <h1>Locations</h1>
+                <div id="VanNuys" class="well moreInfoWell" onclick="highlightInfo('VanNuys');">
+                    <h4 class="location-title">Van Nuys</h4>
+                    <div class="moreInfo hide">
+                        <h3>Bellagio Express Car Wash and Oil Change</h3>
+                        <p class="info-heading">Hours</p>
+                        <p class="info-p">7:00 am - 7:30 pm</p>
+                        <p class="info-heading">Services</p>
+                        <p class="info-p">Express Car Wash, Express Oil Change</p>
+                        <p class="info-heading">Address</p>
+                        <p class="info-p"><a class="map-link" href="http://maps.google.com/?q=6344 Sepulveda Blvd, Van Nuys, CA 91411">6344 Sepulveda Blvd, Van Nuys, CA 91411</a></p>
+                        <p class="info-heading">Phone</p>
+                        <p class="info-p">(818) 947-0360</p>
+                    </div>
+                </div>
+                
+                <div id="NorthElMonte" class="well moreInfoWell" onclick="highlightInfo('NorthElMonte');">
+                    <h4 class="location-title">Temple City</h4>
+                    <div class="moreInfo hide">
+                        <h3>Express Car Wash</h3>
+                        <p class="info-heading">Hours</p>
+                        <p class="info-p">7:00 am - 7:30 pm</p>
+                        <p class="info-heading">Services</p>
+                        <p class="info-p">Express Car Wash</p>
+                        <p class="info-heading">Address</p>
+                        <p class="info-p"><a class="map-link" href="http://maps.google.com/?q=5637 Santa Anita Ave, Temple City, CA 91780"> 5637Santa Anita Ave, Temple City, CA 91780</a></p>
+                        <p class="info-heading">Phone</p>
+                        <p class="info-p">(626) 821-6399</p>
+                    </div>
+                </div>
+                
+                <div id="ManhattanBeach" class="well moreInfoWell" onclick="highlightInfo('ManhattanBeach');">
+                    <h4 class="location-title">Manhattan Beach</h4>
+                    <div class="moreInfo hide">
+                        <h3>Bellagio Full Service</h3>
+                        <p class="info-heading">Hours</p>
+                        <p class="info-p">8:00 am - 6:00 pm</p>
+                        <p class="info-heading">Services</p>
+                        <p class="info-p">Express Car Wash, Full Service Wash, Express Oil Change, Detailing and more</p>
+                        <p class="info-heading">Address</p>
+                        <p class="info-p"><a class="map-link" href="http://maps.google.com/?q=4457 Manhattan Beach Blvd, Lawndale, CA 90260">4457 Manhattan Beach Blvd, Lawndale, CA 90260</a></p>
+                        <p class="info-heading">Phone</p>
+                        <p class="info-p">(310) 970-7566</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-md-pull-4 map-container">
+                <div id="map"></div>
+                <script>
+                    function initMap() {
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            center: {lat: 34.050908, lng: -118.256590},
+                            zoom: 9,
+                            streetViewControl: false,
+                            scrollwheel: false,
+                            scrollable: false
+                        });        
+                        
+                        var markerVanNuys = new google.maps.Marker({
+                            position: {lat: 34.18583, lng:  -118.4659},
+                            map: map,
+                            title: 'Bellagio Express Car Wash and Oil Change'
+                        });
+                        
+                        var markerNorthElMonte = new google.maps.Marker({
+                            position: {lat: 34.10659, lng:  -118.03093},
+                            map: map,
+                            title: 'Bellagio Express Car Wash'
+                        });
+                        
+                        var markerManhattanBeach = new google.maps.Marker({
+                            position: {lat: 33.88753, lng: -118.35429},
+                            map: map,
+                            title: 'Bellagio Auto Center and Car Wash'
+                        });
+
+                        markerVanNuys.addListener('click', function() {
+                            highlightInfo('VanNuys');
+                        });
+                        
+                        markerNorthElMonte.addListener('click', function() {
+                            highlightInfo('NorthElMonte');
+                        });
+                        
+                        markerManhattanBeach.addListener('click', function() {
+                            highlightInfo('ManhattanBeach');
+                        });
+                    }
+                </script>
+                <script async defer 
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzh28W8sLsbRL0q-zxzOfKtQn6l-jUckE&callback=initMap">
+                </script>
+                <p class="map-instructions">Click on the icons on the map or the locations names for more info about the locations</p>
+            </div>
+        </div>
+    </div>
+    
+<!-- SERVICES -->
+    <div id="services" class="anchor">
+        <div class="services">
+        <ul class="nav nav-pills nav-justified">
+            <li>
+                <a data-toggle="tab" href="#detailing-services">
+                    <img class="service-image detailing-services" src="images/Orange_Detailing_icon.png"/>
+                    <h4 class="service-heading">Detailing Services</h4>
+                    <span class="glyphicon glyphicon-menu-down service-arrow" aria-hidden="true"></span>
+                </a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#eco-express-wash">
+                    <img class="service-image eco-express-wash" src="images/Orange_Eco-Express_icon.png"/>
+                    <h4 class="service-heading">Eco-Express Wash</h4>
+                    <span class="glyphicon glyphicon-menu-down service-arrow" aria-hidden="true"></span>
+                </a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#full-service-wash">
+                    <img class="service-image full-service-wash" src="images/orange_Fullsevrvice_icon.png"/>
+                    <h4 class="service-heading">Full Service Wash</h4>
+                    <span class="glyphicon glyphicon-menu-down service-arrow" aria-hidden="true"></span>
+                </a>
+            </li>
+            <li>
+                <a data-toggle="tab" href="#express-oil-change">
+                    <img class="service-image express-oil-change" src="images/orange_oil_icon.png"/>
+                    <h4 class="service-heading">Express Oil Change</h4>
+                    <span class="glyphicon glyphicon-menu-down service-arrow" aria-hidden="true"></span>
+                </a>
+            </li>
+        </ul>
+        
+        <div class="tab-content">
+            <div id="detailing-services" class="tab-pane fade">
+                <div class="row services-info">
+                    <div class="container">
+                        <div class="col-lg-6 col-sm-12">
+                            <ul class="white-list">
+                                <li>Interior Detailing</li>
+                                <li>Headlight Restoration</li>
+                                <li>Carnauba Hand Wax</li>
+                                <li>Exterior Polish</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <ul class="white-list">
+                                <li>Clay Magic Wax</li>
+                                <li>Carpet &amp; Upholstery Shampoo</li>
+                                <li>Pet Hair Removal</li>
+                                <li>Engine Detail</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="eco-express-wash" class="tab-pane fade">
+                <div class="row services-info">
+                    <div class="container">
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <div class="services-info-block">
+                                <h4>Basic</h4>
+                                <h3 class="price">$6</h3>
+                                <p class="member-price">Unlimited Monthly: $24*</p>
+                                <ul>
+                                    <li>Basic Express Wash</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <div class="services-info-block">
+                                <h4>Deluxe</h4>
+                                <h3 class="price">$8</h3>
+                                <p class="member-price">Unlimited Monthly: $34*</p>
+                                <ul>
+                                    <li>Under Carriage Wash</li>
+                                    <li>Rainbow Wax</li>
+                                    <li>Brite Wheel Wash</li>
+                                    <li>Sealer Wax</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <div class="services-info-block">
+                                <h4>Diamond</h4>
+                                <h3 class="price">$10</h3>
+                                <p class="member-price">Unlimited Monthly: $44*</p>
+                                <ul>
+                                    <li>Rain X Water Repellent</li>
+                                    <li>Armorall Tire Cleanse</li>
+                                    <li>Under Carriage Wash</li>
+                                    <li>Rainbow Wax </li>
+                                    <li>Brite Wheel Wash</li>
+                                    <li>Clear Coat Protectant</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <div class="services-info-block">
+                                <h4>Platinum VIP</h4>
+                                <h3 class="price">$13</h3>
+                                <p class="member-price">Unlimited Monthly: $54*</p>
+                                <ul>
+                                    <li>Carnauba Extreme Shine Wax</li>
+                                    <li>Hot Lava Wax</li>
+                                    <li>Rain X Water Repellent </li>
+                                    <li>Armorall Tire Cleanse</li>
+                                    <li>Under Carriage Wash</li>
+                                    <li>Rainbow Wax</li>
+                                    <li>Brite Wheel Wash</li>
+                                    <li>Clear Coat Protectant</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p id="member-footnote">*To purchase an unlimited plan visit your local wash or call (310) 970-7566.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="full-service-wash" class="tab-pane fade">
+                <div class="row services-info">
+                    <div class="container">
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <div class="services-info-block margin-bottom">
+                                <h4>Super Wash</h4>
+                                <h3 class="price">$6</h3>
+                                <ul>
+                                    <li>Sealer Wax</li>
+                                    <li>Air Freshener</li>
+                                </ul>
+                            </div>
+                            <div class="services-info-block">
+                                <h4>Hand Wax</h4>
+                                <h3 class="price">$6</h3>
+                                <ul> 
+                                    <li>Hand Buffed Carnauba Wax</li>
+                                    <li>Amor All Tires</li>
+                                    <li>Air Freshener</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <div class="services-info-block">
+                                <h4>Silver Wash</h4>
+                                <h3 class="price">$8</h3>
+                                <ul>
+                                    <li>Under Carriage Wash</li>
+                                    <li>Rainbow Wax</li>
+                                    <li>Armor All Tires</li>
+                                    <li>Air Freshener</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <div class="services-info-block">
+                                <h4>Platinum Wash</h4>
+                                <h3 class="price">$10</h3>
+                                <ul>
+                                    <li>4 Floor Mats Washed</li>
+                                    <li>Body Sheild Protectant</li>
+                                    <li>Air Freshener</li>
+                                    <li>Complete Armor All</li>
+                                    <li>Rainbow Wax </li>
+                                    <li>Brite Wheel Wash</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12">
+                            <div class="services-info-block">
+                                <h4>Platinum VIP</h4>
+                                <h3 class="price">$13</h3>
+                                <ul>
+                                    <li>Carnauba Extreme Shine Wax</li>
+                                    <li>Hot Lava Wax</li>
+                                    <li>Rain X Water Repellent </li>
+                                    <li>Armorall Tire Cleanse</li>
+                                    <li>Under Carriage Wash</li>
+                                    <li>Rainbow Wax</li>
+                                    <li>Brite Wheel Wash</li>
+                                    <li>Clear Coat Protectant</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="express-oil-change" class="tab-pane fade">
+                <div class="row services-info">
+                    <div class="container oil-info">
+                        <h1 class="oil-header">Give your car the best with<br>Bellagio's Signature Oil Change!</h1>
+                        <p class="oil-paragraph">
+                        Unlike other quick lube shops that use cheap off brand oils at Bellagio we use only the Top brand Shell, Castrol, and Mobil 1 Oils and synthetics to ensure your car’s lasting performance and top quality maintenance. Just one more way that you’ll experience the difference at Bellagio. 
+                        </p>
+                        <div class="row">
+                            <img class="service-logo" src="images/gtx.PNG"/>
+                            <img class="service-logo" src="images/mobil.png"/>
+                            <img class="service-logo" src="images/SHell_logo.png"/>
+                            <img class="service-logo" src="images/ASE.png"/>
+                        </div>
+                        <div data-toggle="collapse" data-target="#more-services" class="btn btn-default btn-bellagios btn-more-services"></span>More Services&nbsp;<span class="more-services-arrow glyphicon glyphicon-circle-arrow-down" aria-hidden="true"></span></div>
+                    </div>
+                </div>
+                <div id="more-services" class="collapse more-services">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <ul class="service-list">
+                                <li class="extra-service"><span class="glyphicon glyphicon glyphicon-cog" aria-hidden="true"></span>&nbsp;Brake Services</li>
+                                <li class="extra-service"><span class="glyphicon glyphicon glyphicon-cog" aria-hidden="true"></span>&nbsp;Drivetrain Services</li>
+                                <li class="extra-service"><span class="glyphicon glyphicon glyphicon-cog" aria-hidden="true"></span>&nbsp;Air Filtration Services</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <ul class="service-list">
+                                <li class="extra-service"><span class="glyphicon glyphicon glyphicon-cog" aria-hidden="true"></span>&nbsp;Fuel System Services</li>
+                                <li class="extra-service"><span class="glyphicon glyphicon glyphicon-cog" aria-hidden="true"></span>&nbsp;Transmission Services</li>
+                                <li class="extra-service"><span class="glyphicon glyphicon glyphicon-cog" aria-hidden="true"></span>&nbsp;Tire Rotation</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <ul class="service-list">
+                                <li class="extra-service"><span class="glyphicon glyphicon glyphicon-cog" aria-hidden="true"></span>&nbsp;Windshield Services</li>
+                                <li class="extra-service"><span class="glyphicon glyphicon glyphicon-cog" aria-hidden="true"></span>&nbsp;Cooling System Serices</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    
+<!--  HOURS INFORMATION  -->
+    <div id="hours" class="anchor">
+        <div class="hours">
+        <div class="hours-color-block">
+            <div class="container">
+                <div class="hours-info">
+                    <h1 class="hours-header"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>&nbsp;Hours of Operation</h1>
+                    <p class="hours-paragraph">All location are open daily from 8am until 6pm*</p>
+                    <p class="footnote">*Hours vary by location. See location details for more information.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+<!--  FOOTER  -->
+    <footer>
+        <h4>Contact Us</h4>
+        <p><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;<a href="http://maps.google.com/?q=4457 Manhattan Beach Blvd, Lawndale, CA 90260">4457 Manhattan Beach Blvd, Lawndale, CA 90260</a></p>
+        <p><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>&nbsp;(310) 970-7566</p>
+        <p><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;<a href="mailto:webmaster@example.com">info@bellagiocarwash.com</a></p>
+        <p class="copyright">Copyright &copy; 2016 Bellagio Carwash. All Rights Reserved.</p>
+    </footer>
+    
+</body>    
+    
+</html>

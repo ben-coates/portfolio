@@ -1,0 +1,549 @@
+/*** General Styles ***/
+
+html, body {
+    overflow-x: hidden;
+    font-family: 'Raleway', sans-serif;
+}
+
+p, h1, h2, h3, h4, h5, h6, li, ul {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: Bold;
+}
+
+p {
+    font-weight: medium;
+}
+
+.anchor {
+    padding-top: 80px;
+    margin-top: -80px;
+}
+
+.btn-bellagios {
+    background-color: #ff6633;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-weight: Semi-Bold;
+}
+
+/*** BEGIN NAVBAR CSS ***/
+.navbar {
+    background-color: #3399cc;
+    border: none;
+    border-bottom: solid #297aa3 1px;
+    border-radius: 0px;
+    max-width: 100%;
+}
+
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse  {
+    max-height: 100%;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+.logo {
+    height: 60px;
+    margin: 10px 40px;
+}
+
+.navbar-nav {
+    text-align: center;
+}
+
+.navbar-nav>li {
+    font-size: 18px;
+}
+
+.navbar-nav>li>a {
+    color: white;
+    font-weight: Semi-Bold;
+    margin: 0px;
+    padding: 30px 30px;
+}
+
+.navbar-nav>li.active>a {
+    color: white;
+    background-color: #ff6633
+}
+
+.navbar-nav>li>a:hover {
+    color: #3399cc;
+    background-color: white;
+}
+/*** END NAVBAR CSS ***/
+
+.highlight {
+    background-color: rgb(255, 102, 51);
+    color: white;
+}
+
+/*** BEGIN WELCOME CSS ***/
+.bellagios {
+    background: 
+    linear-gradient(
+      rgba(51, 153, 204, 0.5), 
+      rgba(51, 153, 204, 0.5)
+    ),
+    url(../images/traffic-car-vehicle-black.jpg);
+    background-attachment: fixed;
+    background-position: right;
+    background-size: cover;
+    display: block;
+    width: 100%;
+}
+
+.bellagio-welcome {
+    padding-top: 325px;
+    padding-left: 80px;
+    padding-right: 120px;
+    padding-bottom: 245px;
+}
+
+.welcome-header {
+    color: white;
+    font-size: 48px;
+    text-align: Left;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.welcome-paragraph {
+    color: white; 
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.welcome-tag {
+    color: white;
+    font-size: 18px;
+}
+/* END WELCOME CSS */
+
+
+/* BEGIN SERVICES INFO CSS*/
+.services {
+    background-color:rgba(255, 255, 255, 0.8);
+    position: static;
+    top: -100px;
+    width: 100%;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    background-color: rgb(51, 153, 204);
+}
+
+.nav-pills>li.active>a>.service-arrow {
+    color: rgb(51, 153, 204);
+}
+
+.nav-pills>li>a {
+    border-radius: 0px;
+    padding: 80px 0px;
+}
+
+.services-info {
+    background-color: rgb(51, 153, 204);
+    padding: 120px 0px;
+}
+
+.services-info-block {
+    color: white;
+    background-color: #ff6633;
+    text-align: center;
+    padding: 10px 2px 2px 2px;
+}
+
+.margin-bottom {
+    margin-bottom: 20px;
+}
+
+.services-info-block>ul {
+    border-radius: 5px;
+    color: #666666;
+    background-color: white;
+    margin: 0px;
+    padding: 8px 0px;
+}
+
+.white-list {
+    color: white;
+    font-size: 24px;
+    padding-left: 10px;
+}
+
+.price {
+    font-family: Akzidenz-Grotesk;
+    font-weight: Bold;
+    font-size: 34px;
+    margin-top: 10px;
+}
+
+.member-price {
+    font-weight: bold;
+}
+
+#member-footnote {
+    color: white;
+    padding: 20px;
+}
+
+.services-info-block>ul>li {
+    list-style-type: none;
+    margin: 16px;
+}
+
+.services-info-block>hr {
+    width: 80%;
+    color: black;
+}
+
+.oil-header {
+    color: white;
+}
+
+.oil-paragraph {
+    color: white;
+    font-size: 18px;
+    padding-right: 50%;
+}
+
+.service-logo {
+    height: 140px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+}
+
+.btn-more-services {
+    float: right;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.more-services {
+    background-color: #ff6633;
+    padding: 60px;
+}
+
+.service-list {
+    margin: 0px;
+    padding: 0px;
+}
+
+.extra-service {
+    list-style-type: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 24px;
+    font-family: 'Raleway';
+    font-weight: 800;
+    padding: 20px;
+}
+
+.tab-content {
+    width: 100%;
+}
+/* END SERVICES CSS */
+
+/* BEGIN LOCATIONS CSS */
+.locations {
+    background-attachment: fixed;
+    background-color: white;
+    margin: 20px 0px;
+    width: 100%;
+}
+
+.locations-row {
+    margin-top: 60px;
+    margin-left: 60px;
+    margin-right: 40px;
+}
+
+#map {
+    height: 600px;
+    margin: 10px 0px;
+}
+
+.location-title {
+    font-size: 28px;
+}
+
+.info-heading {
+    font-size: 16px;
+    font-weight: Bold;
+    margin-bottom: 0px;
+}
+
+.info-p {
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+.map-link {
+    color: white;
+    margin-top: 0px;
+    margin-left: 0px;
+    text-decoration: underline;
+}
+/* END LOCATIONS CSS */
+
+/* BEGIN HOURS INFORMATION CSS */
+.hours {
+    background:
+    linear-gradient(
+      rgba(51, 153, 204, 0.3), 
+      rgba(51, 153, 204, 0.3)
+    ),
+    url(../images/mercedes-tire.jpeg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: block;
+    padding-top: 250px;
+    padding-bottom: 250px;
+    width: 100%;
+}
+
+.hours-color-block {
+    background-color: #3399cc;
+    width: 100%;
+    padding: 40px 0px;
+}
+
+.hours-info {
+    color: white;
+}
+
+.hours-header {
+    font-size: 48px;
+}
+
+.hours-paragraph {
+    font-size: 36px;
+}
+
+.hours-footnote {
+    font-size: 24px;
+}   
+/* END HOURS INFORMATION CSS */
+
+/* BEGIN FOOTER CSS */
+footer {
+    background-color: black;
+    margin: 0px;
+    padding: 10px 60px;
+}
+
+footer>h4 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+footer>p {
+    color: #666666;
+}
+
+footer>p>span {
+    color: #3399cc;
+}
+
+.copyright {
+    text-align: right;
+}
+/* END FOOTER CSS */
+
+/** MOBILE CSS **/
+
+@media screen and (max-width: 1200px) {
+    
+    .navbar-nav>li>a {
+        padding: 30px 20px;
+    }
+    
+    .services-info-block {
+        margin-bottom: 30px;
+    }
+    
+    .extra-service {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .navbar-header {
+        float: none;
+    }
+    
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    
+    .navbar-toggle {
+        display: block;
+    }
+    
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    
+    .navbar-nav {
+        float: none!important;
+		margin-top: 7.5px;
+	}
+    
+	.navbar-nav>li {
+        float: none;
+    }
+    
+    .collapse.in{
+  		display:block !important;
+	}
+    
+    .navbar-toggle {
+        margin: 10px;
+    }
+    
+    .navbar-toggle .icon-bar {
+        height: 4px;
+        width: 40px;
+        margin: 7px;
+    }
+    
+    .bellagio-welcome {
+        padding: 180px 20px;   
+    }
+    
+    .services-info {
+        padding: 40px 0px;
+    }
+    
+    .oil-paragraph {
+        padding-right: initial;
+    }
+    
+    .service-logo {
+        height: 90px;
+    }
+    
+    .more-services {
+        padding: 20px;
+    }
+    
+    .hours {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .logo {
+        height: 60px;
+        margin: 10px 20px; 
+    }
+    
+    .bellagios {
+        linear-gradient(
+                rgba(51, 153, 204, 0.5), 
+                rgba(51, 153, 204, 0.5)
+            ),
+            url(../images/traffic-car-vehicle-black-mobile.jpg);
+        background-position: center;
+        background-attachment: scroll;
+        width: 100%;
+    }
+    
+    .bellagio-welcome {
+        padding: 140px 20px;   
+    }
+    
+    .welcome-header {
+        font-size: 42px;   
+    }
+    
+    .service-image {
+        display: none;
+    }
+
+    .nav-pills>li>a {
+        border-radius: 0px;
+        padding: 10px 0px;
+    }
+    
+    .oil-info {
+        padding: 0px 30px;
+    }
+    
+    .oil-header {
+        font-size: 26px;
+    }
+    
+    .oil-paragraph {
+        font-size: 16px;
+    }
+    
+    .btn-more-services {
+        margin-top: 20px;
+    }
+    
+    .extra-service {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .white-list {
+        margin-left: 30px;
+        margin-bottom: 0px;
+    }
+    
+    .locations {
+        margin: 0px;
+    }
+    
+    .map-container {
+       padding: 0px;
+    }
+    
+    #map {
+        margin: 10px 0px;
+        height: 400px;
+    }
+    
+    .map-instructions {
+        padding: 0px 10px;
+    }
+    
+    .hours {
+        linear-gradient(
+                rgba(51, 153, 204, 0.3), 
+                rgba(51, 153, 204, 0.3)
+            ),
+            url(../images/mercedes-tire-mobile.jpeg);
+        background-attachment: scroll;
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    
+    .hours-header { 
+        font-size: 33px;
+    }
+    
+    .hours-paragraph {
+        font-size: 24px;
+    }
+    
+    .hours-footnote {
+        font-size: 17px;
+    }
+}

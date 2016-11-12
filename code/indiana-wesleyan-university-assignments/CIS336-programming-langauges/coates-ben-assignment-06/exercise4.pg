@@ -1,0 +1,3 @@
+intersectlist([], _, []).
+intersectlist([H|T], L, [H|R]) :- member(H, L), intersectlist(T, L, R).
+intersectlist([_|T], L, R) :- intersectlist(T, L, R).

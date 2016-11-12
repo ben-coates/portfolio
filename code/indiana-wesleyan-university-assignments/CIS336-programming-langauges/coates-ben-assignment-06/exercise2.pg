@@ -1,0 +1,62 @@
+spouse(X,Y) :- husband(X,Y); wife(X,Y).
+grandfather(X,Z) :- father(X,Y), parent(Y,Z).
+grandmother(X,Z) :- mother(X,Y), parent(Y,Z).
+grandchild(X,Y) :- grandfather(Y,X); grandmother(Y,X).
+grandson(X,Y) :- grandchild(X,Y), male(X).
+granddaughter(X,Y) :- grandchild(X,Y), female(Y).
+father(X,Y) :- parent(X,Y), male(X).
+mother(X,Y) :- parent(X,Y), female(X).
+daughter(X,Y) :- parent(Y,X), female(X).
+son(X,Y) :- parent(Y,X), male(X).
+sibling(X,Y) :- parent(Z,X), parent(Z,Y), X\=Y.
+sister(X,Y) :- sibling(X,Y), female(X).
+brother(X,Y) :- sibling(X,Y), male(X).
+fatherinlaw(X,Y) :- father(X,Z), spouse(Y,Z).
+motherinlaw(X,Y) :- mother(X,Z), spouse(Y,Z).
+soninlaw(X,Y) :- fatherinlaw(Y,X), male(X); motherinlaw(Y,X), male(X).
+daughterinlaw(X,Y) :- fatherinlaw(Y,X), male(X); motherinlaw(Y,X), male(X).
+sisterinlaw(X,Y) :- spouse(X,S), sibling(S,Y), female(X); sibling(X,R), spouse(R,Y), female(X).
+brotherinlaw(X,Y) :- spouse(X,Z), sibling(Z,Y), male(X); sibling(X,Z), spouse(Z,Y), male(X).
+uncle(X,Y) :- sisterinlaw(I,X), parent(I,Y), male(X); brotherinlaw(B,X), parent(B,Y), male(X).
+aunt(X,Y) :- sisterinlaw(I,X), parent(I,Y), female(X); brotherinlaw(B,X), parent(B,Y), female(X).
+niece(X,Y) :- uncle(Y,X), female(X); aunt(Y,X), female(X).
+nephew(X,Y) :- uncle(Y,X), male(X); aunt(Y,X), male(X).
+cousin(X,Y) :- parent(U,X), parent(A,Y), sibling(U,A).
+
+male(jerald).
+male(john).
+male(david).
+male(joseph).
+male(gerald).
+male(stephen).
+male(jonathan).
+male(benjamin).
+
+female(shirley).
+female(janet).
+female(melody).
+female(elizabeth).
+
+parent(jerald, janet).
+parent(jerald, john).
+parent(shirley, janet).
+parent(shirley, john).
+parent(gerald, stephen).
+parent(gerald, jonathan).
+parent(gerald, benjamin).
+parent(janet, stephen).
+parent(janet, jonathan).
+parent(janet, benjamin).
+parent(john, elizabeth).
+parent(john, david).
+parent(john, joseph).
+parent(melody, elizabeth).
+parent(melody, david).
+parent(melody, joseph).
+
+husband(jerald, shirley).
+husband(gerald, janet).
+husband(john, melody).
+wife(shirley, jerald).
+wife(janet, gerald).
+wife(melody, john).

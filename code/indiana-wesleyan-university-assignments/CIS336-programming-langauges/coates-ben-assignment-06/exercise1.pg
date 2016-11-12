@@ -1,0 +1,152 @@
+husband(jerald, shirley).
+husband(gerald, janet).
+husband(john, melody).
+wife(shirley, jerald).
+wife(janet, gerald).
+wife(melody, john).
+
+grandfather(jerald, elizabeth).
+grandfather(jerald, stephen).
+grandfather(jerald, david).
+grandfather(jerald, jonathan).
+grandfather(jerald, joseph).
+grandfather(jerald, benjamin).
+grandmother(shirley, elizabeth).
+grandmother(shirley, stephen).
+grandmother(shirley, david).
+grandmother(shirley, jonathan).
+grandmother(shirley, joseph).
+grandmother(shirley, benjamin).
+
+father(jerald, janet).
+father(jerald, john).
+father(gerald, stephen).
+father(gerald, jonathan).
+father(gerald, benjamin).
+father(john, elizabeth).
+father(john, david).
+father(john, joseph).
+
+mother(shirley, janet).
+mother(shirley, john).
+mother(janet, stephen).
+mother(janet, jonathan).
+mother(janet, benjamin).
+mother(melody, elizabeth).
+mother(melody, david).
+mother(melody, joseph).
+
+daughter(janet, jerald).
+daughter(janet, shirley).
+daughter(elizabeth, melody).
+daughter(elizabeth, john).
+
+son(john, jerald).
+son(john, shirley).
+son(stephen, janet).
+son(jonathan, janet).
+son(benjamin, janet).
+son(stephen, gerald).
+son(jonathan, gerald).
+son(benjamin, gerald).
+son(david, melody).
+son(joseph, melody).
+son(david, john).
+son(joseph, john).
+
+sister(janet, john).
+sister(elizabeth, david).
+sister(elizabeth, joseph).
+
+brother(john, janet).
+brother(stephen, jonathan).
+brother(stephen, benjamin).
+brother(jonathan, stephen).
+brother(jonathan, benjamin).
+brother(benjamin, stephen).
+brother(benjamin, jonathan).
+brother(david, elizabeth).
+brother(david, joseph).
+brother(joseph, elizabeth).
+brother(joseph, david).
+
+fatherinlaw(jerald, gerald).
+fatherinlaw(jerald, melody).
+
+motherinlaw(shirely, gerald).
+motherinlaw(shirely, melody).
+
+soninlaw(gerald, jerald).
+soninlaw(gerald, shirley).
+
+daughterinlaw(melody, jerald).
+daughterinlaw(melody, shirley).
+
+sisterinlaw(melody, gerald).
+sisterinlaw(janet, melody).
+sisterinlaw(melody, janet).
+
+brotherinlaw(john, gerald).
+brotherinlaw(gerald, john).
+brotherinlaw(gerald, melody).
+
+granddaughter(elizabeth, jerald).
+granddaughter(elizabeth, shirley).
+
+grandson(stephen, jerald).
+grandson(stephen, shirley).
+grandson(david, jerald).
+grandson(david, shirley).
+grandson(jonathan, jerald).
+grandson(jonathan, shirley).
+grandson(joseph, jerald).
+grandson(joseph, shirley).
+grandson(benjamin, jerald).
+grandson(benjamin, shirley).
+
+uncle(gerald, elizabeth).
+uncle(gerald, david).
+uncle(gerald, joseph).
+uncle(john, stephen).
+uncle(john, jonathan).
+uncle(john, benjamin).
+
+aunt(janet, elizabeth).
+aunt(janet, david).
+aunt(janet, joseph).
+aunt(melody, stephen).
+aunt(melody, jonathan).
+aunt(melody, benjamin).
+
+niece(elizabeth, gerald).
+niece(elizabeth, janet).
+
+nephew(david, gerald).
+nephew(david, janet).
+nephew(joseph, gerald).
+nephew(joseph, janet).
+nephew(stephen, john).
+nephew(stephen, melody).
+nephew(jonathan, john).
+nephew(jonathan, melody).
+nephew(benjamin, john).
+nephew(benjamin, melody).
+
+cousin(elizabeth, stephen).
+cousin(elizabeth, jonathan).
+cousin(elizabeth, benjamin).
+cousin(stephen, elizabeth).
+cousin(stephen, david).
+cousin(stephen, joseph).
+cousin(david, stephen).
+cousin(david, jonathan).
+cousin(david, benjamin).
+cousin(jonathan, elizabeth).
+cousin(jonathan, david).
+cousin(jonathan, joseph).
+cousin(joseph, stephen).
+cousin(joseph, jonathan).
+cousin(joseph, benjamin).
+cousin(benjamin, elizabeth).
+cousin(benjamin, david).
+cousin(benjamin, joseph).
