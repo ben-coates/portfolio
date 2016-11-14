@@ -1,0 +1,1 @@
+Code within this folder (indiana-wesleyan-university-assignments) was written for classes while a student at IWU in Marion, IN. Be advised that not all of this code may work as in the original state is was written.
