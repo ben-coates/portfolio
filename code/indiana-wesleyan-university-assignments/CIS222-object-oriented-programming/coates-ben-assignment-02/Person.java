@@ -8,7 +8,7 @@
 
 class Person
 {
-    // Class attribute
+    // Class attributes
     /**
      * Age of the person
      */
@@ -39,6 +39,7 @@ class Person
         setGender(gender);
     }
 
+    // Getters
     /**
      * Gets the age of the person
      * @return The age of the person
@@ -64,33 +65,62 @@ class Person
         return gender;
     }
 
+    // Setters
     /**
      * Sets the new age of the person
+     * Checks to see if age is greater than zero.
+     * If not prints message to console
      * @param age The new age of the person
      */
-    private void setAge(int age) {
-        this.age = age;
+    private void setAge(int age)
+    {
+        if(age > 0) {
+            this.age = age;
+        }
+        else
+        {
+            System.out.println("Age must be greater than 0");
+        }
     }
 
     /**
      * Sets the new name of the person
+     * Checks to see if name has at least one character
+     * If not prints a message to the console
      * @param name The new name of the person
      */
-    private void setName(String name) {
-        this.name = name;
+    private void setName(String name)
+    {
+        if (name != "")
+        {
+            this.name = name;
+        }
+        else
+        {
+            System.out.println("Name must be at least on character long");
+        }
     }
 
 
     /**
      * Sets the new gender of the person
+     * Converts the input into all lowercase
+     * Checks to see of gender is either male or female
+     * If not, prints a message to the console
      * @param gender The new gender of the person
      */
     private void setGender(String gender) {
-        gender = gender.toLowerCase();
-        assert(gender == "male" || gender == "female");
-        this.gender = gender;
+        if(gender.compareToIgnoreCase("male") >= 0 || gender.compareToIgnoreCase("female") >= 0)
+        {
+            this.gender = gender.toLowerCase();
+        }
+        else
+        {
+            System.out.println("Gender must equal \"male\" or \"female\"");
+        }
     }
 
+    // Other Methods
     /**
      * Returns the information of the object in a String
      * @return The present information of the existing person in a String
